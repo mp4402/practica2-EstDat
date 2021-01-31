@@ -16,7 +16,7 @@ public class practica2
         int opcion = 0;
         while (control == 0)
         {
-            System.out.print("Bienvenido\n1. Realizar un debito\n2. Realizar un credito\n3. Mostral el total de Debitos\n4. Motrar el total de Creditos\n5.Mostrar el saldo total\n6.Mostrar el promedio de Debitos\n7. Mostrar el Debito mas grande\n8. Mostrar el total de creditos y debitos realizados\n9. Imprimir los elementos de los arrays\n10.Eliminar creditos\nSeleccione una opcion: ");
+            System.out.print("Bienvenido\n1. Realizar un debito\n2. Realizar un credito\n3. Mostral el total de Debitos\n4. Motrar el total de Creditos\n5. Mostrar el saldo total\n6. Mostrar el promedio de Debitos\n7. Mostrar el Debito mas grande\n8. Mostrar el total de creditos y debitos realizados\n9. Imprimir los elementos de los arrays\n10. Eliminar creditos\n11. Salir\nSeleccione una opcion: ");
             opcion = teclado.nextInt();
             switch(opcion){
                 case 1:
@@ -49,6 +49,10 @@ public class practica2
                 case 10:
                     eliminarCreditos();
                     break;
+                case 11:
+                    System.out.println("Gracias por utilizar este programa!");
+                    control = 1;
+                    break;
                 default:
                     System.out.println("Por favor ingrese una opción valida");
                     break;
@@ -63,7 +67,7 @@ public class practica2
             debitos[contadorDebitos] = teclado.nextFloat();
             totalDebitos+= debitos[contadorDebitos];
             contadorDebitos++;
-            System.out.print("¿Desea realizar otro debito?\n1. Si\n2. No\nSeleccione una opcionn: ");
+            System.out.print("¿Desea realizar otro debito?\n1. Si\n2. No\nSeleccione una opcion: ");
             if (teclado.nextInt() == 1)   
             {
                 realizarDebitos();
@@ -82,7 +86,7 @@ public class practica2
             creditos[contadorCreditos] = teclado.nextFloat();
             totalCreditos+= creditos[contadorCreditos];
             contadorCreditos++;
-            System.out.print("¿Desea realizar otro credito?\n1. Si\n2. No\nSeleccione una opcionn: ");
+            System.out.print("¿Desea realizar otro credito?\n1. Si\n2. No\nSeleccione una opcion: ");
             if (teclado.nextInt() == 1)   
             {
                 realizarCreditos();
@@ -119,7 +123,7 @@ public class practica2
                 noMayor = debitos[x];
             }
         }
-        System.out.println("El monto de Debito más grande es: " + noMayor);
+        System.out.println("El monto de Debito mas grande es: " + noMayor);
     }
     private static void totalOperaciones()
     {
